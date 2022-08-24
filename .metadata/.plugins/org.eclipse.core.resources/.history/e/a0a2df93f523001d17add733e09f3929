@@ -1,0 +1,8 @@
+package com.gabriel.myapi.resources.exceptions;
+
+public class StandarError {
+
+	private integer status;
+	private Long timestamp;
+	private String message;
+}

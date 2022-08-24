@@ -7,16 +7,18 @@ import org.springframework.stereotype.Service;
 
 import com.gabriel.myapi.domain.Usuario;
 import com.gabriel.myapi.repositories.UsuarioRepository;
+import com.gabriel.myapi.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class UsuarioService {
-	
+
 	@Autowired
 	private UsuarioRepository repository;
-	
+
 	public Usuario findById(Integer id) {
-		Optional<Usuario>obj = repository.findById(id);
-		return obj.orElse(null);
+		Optional<Usuario> obj = repository.findById(id);
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado!, id: " + id + ", Tipo: " + Usuario.class.getName()));
 	}
 
 }

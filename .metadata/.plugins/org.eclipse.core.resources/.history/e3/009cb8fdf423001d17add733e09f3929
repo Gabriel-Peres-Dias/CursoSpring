@@ -1,0 +1,5 @@
+package com.gabriel.myapi.services.exceptions;
+
+public class ObjectNotFoundException {
+
+}
