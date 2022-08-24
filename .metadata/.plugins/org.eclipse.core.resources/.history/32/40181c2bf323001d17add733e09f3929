@@ -1,0 +1,16 @@
+package com.gabriel.myapi.services;
+
+import org.springframework.stereotype.Service;
+
+import com.gabriel.myapi.domain.Usuario;
+
+@Service
+public class UsuarioService {
+	
+	@AutoWired
+	private UsuarioRepository usuario;
+	public Usuario findById(Integer id) {
+		
+	}
+
+}
