@@ -39,9 +39,9 @@ public class UsuarioService {
 		return repository.save(obj);
 	}
 
-	public void delete(Integer id) {
-		findById(id);
-		repository.deleteById(id);
+	public Usuario delete(Integer id) {
+		Usuario newObj = findById(id);
+		return repository.delete(newObj);
 	}
 
 }

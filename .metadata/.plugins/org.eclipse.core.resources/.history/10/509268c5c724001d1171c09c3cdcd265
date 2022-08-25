@@ -49,11 +49,10 @@ public class UsuarioResource {
 		return ResponseEntity.created(uri).build();
 	}
 	
-	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<Void> delete(@PathVariable Integer id){
-		service.delete(id);
-		return ResponseEntity.noContent().build();
-		
+	@DeleteMapping
+	public ResponseEntity<Usuario> delete(@PathVariable Integer id){
+		Usuario newObj = service.delete(id);
+		return ResponseEntity.ok().body(newObj);
 	
 	}
 
