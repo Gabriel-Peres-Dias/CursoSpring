@@ -23,11 +23,11 @@ public class Usuario implements Serializable {
 	@Length(min = 5, max = 100, message = "O nome deve ter entre 5 a 100 caracteres")
 	private String nome;
 	
-	@Length(min = 5, max = 20, message = "O nome deve ter entre 5 a 20 caracteres")
+	@Length(min = 5, max = 20, message = "O login deve ter entre 5 a 20 caracteres")
 	@NotEmpty(message = "Campo login não pode ser vazio!")
 	private String login;
 	
-	@Length(min = 5, max = 10, message = "O nome deve ter entre 5 a 10 caracteres")
+	@Length(min = 5, max = 10, message = "A senha deve ter entre 5 a 10 caracteres")
 	@NotEmpty(message = "Campo senha não pode ser vazio!")
 	private String senha;
 
